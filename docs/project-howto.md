@@ -9,6 +9,8 @@ Requirements:
 `source ./env/bin/activate`
 5. Install the requirements.txt
 `pip install -r /path/to/requirements.txt`
+6. RYM scraper uses selenium which needs a driver: geckdriver
+`brew install geckodriver`
 
 
 Note: 
