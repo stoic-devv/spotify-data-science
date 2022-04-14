@@ -13976,10 +13976,14 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="About-Data">About Data<a class="anchor-link" href="#About-Data">&#182;</a></h2><p>We have collected our data from multiple sources: Spotify and RateYourMusic. <br/>
-Spotify data consists of its metadata like name, genre, popularity and audio features like liveness, tempo, danceability, etc. <br/>
-RateYourMusic is a public forum where users review albums and songs. Its data consists of critic rating, user rating, reviews, and number of reviews.<br/>
-Link to our <a href="https://github.com/stoic-devv/spotify-data-science/tree/main/data">dataset</a></p>
+<h4 id="project-repository"><a href="https://github.com/stoic-devv/spotify-data-science">project repository</a><br /><a class="anchor-link" href="#project-repository">&#182;</a></h4><h4 id="project-website"><a href="https://stoic-devv.github.io/spotify-data-science/">project website</a><a class="anchor-link" href="#project-website">&#182;</a></h4><h4 id="For-best-viewing-experience-open-this-document-here">For best viewing experience open this document <a href="https://stoic-devv.github.io/spotify-data-science/progress-report.html">here</a><a class="anchor-link" href="#For-best-viewing-experience-open-this-document-here">&#182;</a></h4><h2 id="About-Data">About Data<a class="anchor-link" href="#About-Data">&#182;</a></h2><ol>
+<li>We have collected our data from multiple sources: Spotify and RateYourMusic. <br/></li>
+<li>Spotify data consists of its metadata like name, genre, popularity and audio features like liveness, tempo, danceability, etc. <br/></li>
+<li>RateYourMusic is a public forum where users review albums and songs. Its data consists of critic rating, user rating, reviews, and number of reviews.<br/></li>
+<li>We have merged this data such that each entry has the song metadata, audio features, and ratings data. The ratings data will serve as a label and this is the reason we scraped data from multiple sites. <br/></li>
+<li>The data is stored in csv format with a <code>~</code> separator.</li>
+<li>Link to our <a href="https://github.com/stoic-devv/spotify-data-science/tree/main/data">dataset</a>.</li>
+</ol>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14228,7 +14232,8 @@ Link to our <a href="https://github.com/stoic-devv/spotify-data-science/tree/mai
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">4950</span><span class="p">,</span><span class="mi">4953</span><span class="p">,</span><span class="mi">2980</span><span class="p">,</span><span class="mi">2984</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4950</span><span class="p">,</span> <span class="mi">5500</span><span class="p">),</span> <span class="mi">15</span><span class="p">)]</span>
 </pre></div>
 
      </div>
@@ -14292,104 +14297,368 @@ Link to our <a href="https://github.com/stoic-devv/spotify-data-science/tree/mai
   </thead>
   <tbody>
     <tr>
-      <th>4950</th>
-      <td>3TO7bbrUKrOSPGRTB5MeCz</td>
-      <td>Time</td>
-      <td>0.359</td>
-      <td>0.480</td>
+      <th>5110</th>
+      <td>6XMHWGtaCQcEGMTy2QIXM5</td>
+      <td>My Love Is Growing</td>
+      <td>0.5420</td>
+      <td>0.675</td>
       <td>9</td>
-      <td>-11.790</td>
-      <td>1</td>
-      <td>0.0841</td>
-      <td>0.521</td>
-      <td>0.004300</td>
+      <td>-10.819</td>
+      <td>0</td>
+      <td>0.0409</td>
+      <td>0.1770</td>
+      <td>0.000003</td>
       <td>...</td>
       <td>4</td>
-      <td>The Dark Side of the Moon</td>
-      <td>23 March 1973</td>
-      <td>Art Rock, Progressive Rock</td>
-      <td>https://api.spotify.com/v1/tracks/3TO7bbrUKrOS...</td>
-      <td>https://api.spotify.com/v1/audio-analysis/3TO7...</td>
-      <td>4.21</td>
-      <td>60837.0</td>
-      <td>1559.0</td>
-      <td>73</td>
+      <td>Let's Get It On</td>
+      <td>28 August 1973</td>
+      <td>Smooth Soul</td>
+      <td>https://api.spotify.com/v1/tracks/6XMHWGtaCQcE...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/6XMH...</td>
+      <td>3.89</td>
+      <td>6394.0</td>
+      <td>104.0</td>
+      <td>29</td>
     </tr>
     <tr>
-      <th>4953</th>
-      <td>1TKTiKp3zbNgrBH2IwSwIx</td>
-      <td>Us and Them</td>
-      <td>0.357</td>
-      <td>0.302</td>
-      <td>2</td>
-      <td>-14.526</td>
+      <th>5181</th>
+      <td>2fYxpSFhg95sBwaGp5JlFU</td>
+      <td>Your Sister Can't Twist (But She Can Rock'n' R...</td>
+      <td>0.4640</td>
+      <td>0.972</td>
+      <td>4</td>
+      <td>-6.887</td>
       <td>1</td>
-      <td>0.0303</td>
-      <td>0.862</td>
-      <td>0.559000</td>
+      <td>0.0553</td>
+      <td>0.0111</td>
+      <td>0.000001</td>
       <td>...</td>
       <td>4</td>
-      <td>The Dark Side of the Moon</td>
-      <td>23 March 1973</td>
-      <td>Art Rock, Progressive Rock</td>
-      <td>https://api.spotify.com/v1/tracks/1TKTiKp3zbNg...</td>
-      <td>https://api.spotify.com/v1/audio-analysis/1TKT...</td>
-      <td>4.21</td>
-      <td>60837.0</td>
-      <td>1559.0</td>
-      <td>67</td>
+      <td>Goodbye Yellow Brick Road</td>
+      <td>5 October 1973</td>
+      <td>Piano Rock, Pop Rock</td>
+      <td>https://api.spotify.com/v1/tracks/2fYxpSFhg95s...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/2fYx...</td>
+      <td>3.84</td>
+      <td>7448.0</td>
+      <td>210.0</td>
+      <td>39</td>
     </tr>
     <tr>
-      <th>2980</th>
-      <td>6g8Z3jy8Glvl0EfugPH58o</td>
-      <td>While My Guitar Gently Weeps</td>
-      <td>0.576</td>
-      <td>0.382</td>
+      <th>5251</th>
+      <td>1Hivv2cXFYPINeKTZLY6Kh</td>
+      <td>Milagre Dos Peixes - Ao Vivo</td>
+      <td>0.3470</td>
+      <td>0.458</td>
+      <td>9</td>
+      <td>-11.763</td>
+      <td>1</td>
+      <td>0.0371</td>
+      <td>0.1720</td>
+      <td>0.000004</td>
+      <td>...</td>
+      <td>4</td>
+      <td>Milagre dos peixes</td>
+      <td>1973</td>
+      <td>MPB, Avant-Folk</td>
+      <td>https://api.spotify.com/v1/tracks/1Hivv2cXFYPI...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/1Hiv...</td>
+      <td>3.87</td>
+      <td>1625.0</td>
+      <td>19.0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>5472</th>
+      <td>11C3sTCe07SHNDxi2IAZoI</td>
+      <td>Soon - 2003 Remaster</td>
+      <td>0.1450</td>
+      <td>0.361</td>
+      <td>9</td>
+      <td>-8.760</td>
+      <td>0</td>
+      <td>0.0350</td>
+      <td>0.3480</td>
+      <td>0.354000</td>
+      <td>...</td>
+      <td>5</td>
+      <td>Relayer</td>
+      <td>28 November 1974</td>
+      <td>Symphonic Prog, Progressive Rock</td>
+      <td>https://api.spotify.com/v1/tracks/11C3sTCe07SH...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/11C3...</td>
+      <td>3.84</td>
+      <td>8149.0</td>
+      <td>228.0</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>5095</th>
+      <td>1UMoEbjcFhtSwZUNo2MK4y</td>
+      <td>Mrs Vandebilt - Remastered 2010</td>
+      <td>0.6960</td>
+      <td>0.641</td>
+      <td>9</td>
+      <td>-8.633</td>
+      <td>1</td>
+      <td>0.0309</td>
+      <td>0.0442</td>
+      <td>0.027100</td>
+      <td>...</td>
+      <td>4</td>
+      <td>Band on the Run</td>
+      <td>7 December 1973</td>
+      <td>Pop Rock</td>
+      <td>https://api.spotify.com/v1/tracks/1UMoEbjcFhtS...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/1UMo...</td>
+      <td>3.87</td>
+      <td>7733.0</td>
+      <td>193.0</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>5023</th>
+      <td>1HKbWgJm1kYJvuU1yl7Aoy</td>
+      <td>I Am The Sea</td>
+      <td>0.0839</td>
+      <td>0.691</td>
+      <td>1</td>
+      <td>-25.041</td>
+      <td>1</td>
+      <td>0.1030</td>
+      <td>0.3620</td>
+      <td>0.026300</td>
+      <td>...</td>
+      <td>3</td>
+      <td>Quadrophenia</td>
+      <td>26 October 1973</td>
+      <td>Rock Opera, Hard Rock</td>
+      <td>https://api.spotify.com/v1/tracks/1HKbWgJm1kYJ...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/1HKb...</td>
+      <td>3.91</td>
+      <td>9358.0</td>
+      <td>284.0</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>4957</th>
+      <td>1PNk1Xno8t3spNEU78Hxsu</td>
+      <td>Future Days</td>
+      <td>0.7030</td>
+      <td>0.664</td>
       <td>7</td>
-      <td>-10.925</td>
-      <td>1</td>
-      <td>0.0312</td>
-      <td>0.948</td>
-      <td>0.001500</td>
+      <td>-17.789</td>
+      <td>0</td>
+      <td>0.0797</td>
+      <td>0.2450</td>
+      <td>0.906000</td>
       <td>...</td>
       <td>4</td>
-      <td>The Beatles [White Album]</td>
-      <td>22 November 1968</td>
-      <td>Pop Rock, Rock</td>
-      <td>https://api.spotify.com/v1/tracks/6g8Z3jy8Glvl...</td>
-      <td>https://api.spotify.com/v1/audio-analysis/6g8Z...</td>
-      <td>4.14</td>
-      <td>37612.0</td>
-      <td>1095.0</td>
-      <td>14</td>
+      <td>Future Days</td>
+      <td>September 1973</td>
+      <td>Krautrock</td>
+      <td>https://api.spotify.com/v1/tracks/1PNk1Xno8t3s...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/1PNk...</td>
+      <td>4.12</td>
+      <td>17205.0</td>
+      <td>253.0</td>
+      <td>34</td>
     </tr>
     <tr>
-      <th>2984</th>
-      <td>1uTJ14NsfGsg7ZG5tcpdGC</td>
-      <td>Blackbird</td>
-      <td>0.647</td>
-      <td>0.680</td>
-      <td>9</td>
-      <td>-8.260</td>
+      <th>5188</th>
+      <td>35D8nUihmqRQaFHEQnOXXQ</td>
+      <td>What's The Buzz? / Strange Thing, Mystifying</td>
+      <td>0.5950</td>
+      <td>0.746</td>
+      <td>7</td>
+      <td>-8.972</td>
       <td>1</td>
-      <td>0.0611</td>
-      <td>0.346</td>
-      <td>0.000017</td>
+      <td>0.0887</td>
+      <td>0.2740</td>
+      <td>0.000000</td>
       <td>...</td>
       <td>4</td>
-      <td>The Beatles [White Album]</td>
-      <td>22 November 1968</td>
-      <td>Pop Rock, Rock</td>
-      <td>https://api.spotify.com/v1/tracks/1uTJ14NsfGsg...</td>
-      <td>https://api.spotify.com/v1/audio-analysis/1uTJ...</td>
-      <td>4.14</td>
-      <td>37612.0</td>
-      <td>1095.0</td>
-      <td>6</td>
+      <td>Jesus Christ Superstar</td>
+      <td>1973</td>
+      <td>Rock Opera, Film Soundtrack, Show Tunes</td>
+      <td>https://api.spotify.com/v1/tracks/35D8nUihmqRQ...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/35D8...</td>
+      <td>3.89</td>
+      <td>646.0</td>
+      <td>18.0</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th>4996</th>
+      <td>4gUNTtPmsTzpTdJY3aZbLw</td>
+      <td>Fluff (2009 - Remaster)</td>
+      <td>0.4930</td>
+      <td>0.236</td>
+      <td>2</td>
+      <td>-17.116</td>
+      <td>1</td>
+      <td>0.0358</td>
+      <td>0.8010</td>
+      <td>0.968000</td>
+      <td>...</td>
+      <td>3</td>
+      <td>Sabbath Bloody Sabbath</td>
+      <td>28 December 1973</td>
+      <td>Heavy Metal, Hard Rock</td>
+      <td>https://api.spotify.com/v1/tracks/4gUNTtPmsTzp...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/4gUN...</td>
+      <td>3.98</td>
+      <td>16313.0</td>
+      <td>328.0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5101</th>
+      <td>39l1UORIhuHvUWfxG53tRZ</td>
+      <td>Let's Get It On</td>
+      <td>0.5390</td>
+      <td>0.599</td>
+      <td>3</td>
+      <td>-10.638</td>
+      <td>1</td>
+      <td>0.0483</td>
+      <td>0.0375</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>4</td>
+      <td>Let's Get It On</td>
+      <td>28 August 1973</td>
+      <td>Smooth Soul</td>
+      <td>https://api.spotify.com/v1/tracks/39l1UORIhuHv...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/39l1...</td>
+      <td>3.89</td>
+      <td>6394.0</td>
+      <td>104.0</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>5164</th>
+      <td>7pT6IaXJKXDq85Ucu2fNUg</td>
+      <td>Ottagtha Katikko</td>
+      <td>0.9670</td>
+      <td>0.450</td>
+      <td>10</td>
+      <td>-10.763</td>
+      <td>0</td>
+      <td>0.0896</td>
+      <td>0.0444</td>
+      <td>0.009570</td>
+      <td>...</td>
+      <td>4</td>
+      <td>Gentleman</td>
+      <td>1973</td>
+      <td>Afrobeat</td>
+      <td>https://api.spotify.com/v1/tracks/7pT6IaXJKXDq...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/7pT6...</td>
+      <td>3.89</td>
+      <td>2616.0</td>
+      <td>31.0</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>5113</th>
+      <td>1emvYBqAWFPpFUQyhBG9He</td>
+      <td>I'd Give My Life For You - Alternate Mix</td>
+      <td>0.2230</td>
+      <td>0.409</td>
+      <td>0</td>
+      <td>-8.256</td>
+      <td>1</td>
+      <td>0.0334</td>
+      <td>0.3150</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>3</td>
+      <td>Let's Get It On</td>
+      <td>28 August 1973</td>
+      <td>Smooth Soul</td>
+      <td>https://api.spotify.com/v1/tracks/1emvYBqAWFPp...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/1emv...</td>
+      <td>3.89</td>
+      <td>6394.0</td>
+      <td>104.0</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>5294</th>
+      <td>1EHgtjRSiVPq9nC6AHonzt</td>
+      <td>Voso</td>
+      <td>0.5930</td>
+      <td>0.850</td>
+      <td>1</td>
+      <td>-6.566</td>
+      <td>1</td>
+      <td>0.0678</td>
+      <td>0.2070</td>
+      <td>0.000134</td>
+      <td>...</td>
+      <td>4</td>
+      <td>Lo mato</td>
+      <td>August 1973</td>
+      <td>Salsa dura</td>
+      <td>https://api.spotify.com/v1/tracks/1EHgtjRSiVPq...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/1EHg...</td>
+      <td>3.89</td>
+      <td>615.0</td>
+      <td>6.0</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>4988</th>
+      <td>5OBptQtIlGOG94la7qil6c</td>
+      <td>Firth Of Fifth - Remastered 2008</td>
+      <td>0.2470</td>
+      <td>0.594</td>
+      <td>4</td>
+      <td>-9.710</td>
+      <td>0</td>
+      <td>0.0408</td>
+      <td>0.0214</td>
+      <td>0.099900</td>
+      <td>...</td>
+      <td>4</td>
+      <td>Selling England by the Pound</td>
+      <td>12 October 1973</td>
+      <td>Progressive Rock, Symphonic Prog</td>
+      <td>https://api.spotify.com/v1/tracks/5OBptQtIlGOG...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/5OBp...</td>
+      <td>4.01</td>
+      <td>15641.0</td>
+      <td>334.0</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>5490</th>
+      <td>3YlslxRWfNycyYsB6sKrJW</td>
+      <td>Asylum</td>
+      <td>0.4960</td>
+      <td>0.288</td>
+      <td>10</td>
+      <td>-14.409</td>
+      <td>1</td>
+      <td>0.0443</td>
+      <td>0.5680</td>
+      <td>0.000621</td>
+      <td>...</td>
+      <td>4</td>
+      <td>Crime of the Century</td>
+      <td>November 1974</td>
+      <td>Progressive Rock, Art Rock</td>
+      <td>https://api.spotify.com/v1/tracks/3YlslxRWfNyc...</td>
+      <td>https://api.spotify.com/v1/audio-analysis/3Yls...</td>
+      <td>3.84</td>
+      <td>6062.0</td>
+      <td>143.0</td>
+      <td>46</td>
     </tr>
   </tbody>
 </table>
-<p>4 rows × 26 columns</p>
+<p>15 rows × 26 columns</p>
 </div>
 </div>
 
@@ -14402,7 +14671,26 @@ Link to our <a href="https://github.com/stoic-devv/spotify-data-science/tree/mai
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Data-Collection">Data Collection<a class="anchor-link" href="#Data-Collection">&#182;</a></h2>
+<h2 id="Data-Collection">Data Collection<a class="anchor-link" href="#Data-Collection">&#182;</a></h2><h3 id="Collection-Process">Collection Process<a class="anchor-link" href="#Collection-Process">&#182;</a></h3><ol>
+<li>Our approach was to first scrape the data from RYM as there was some uncertainity with it. Retrieving data from Spotify is straightforward with Python library <code>spotipy</code> which internally integrates with its well documented API.</li>
+<li>We have stored our data in csv format </li>
+</ol>
+<h3 id="How-did-collect-your-data">How did collect your data<a class="anchor-link" href="#How-did-collect-your-data">&#182;</a></h3><ol>
+<li>We first explored libraries to scrape data: decided on <a href="https://spotipy.readthedocs.io/en/2.19.0/">spotipy</a> for Spotify and <a href="https://github.com/dbeley/rymscraper">rymparser</a> for RateYourMusic.</li>
+<li>We scraped through the charts of top 20 albums each year from 1960-2021 over RYM. Collected features like reviews, ratings, number of reviews, genres, album name.</li>
+<li>Mapped the album name from RYM data to Spotify by using Spotify search APIs.</li>
+<li>Added more features relating to audio, quality and song metadata.</li>
+</ol>
+<h3 id="How-did-you-clean-your-data">How did you clean your data<a class="anchor-link" href="#How-did-you-clean-your-data">&#182;</a></h3><ol>
+<li>One advantage of scraping your own data is we can make cleaning part of the scraping process which is what we did. Since the data was in abundance we filtered out the tracks that has missing values. </li>
+<li>While combining the RYM with Spotify dataset we defined and used our own similarity metric wrt to the album titles when querying the Spotify APIs</li>
+<li>To have a good distribution of genres we deployed multiple metrics like: limiting the number of songs by a particular artist, taking the most popular songs from the rated albums.</li>
+</ol>
+<h3 id="Mention-any-difficulties-you-faced-in-the-beginning-steps">Mention any difficulties you faced in the beginning steps<a class="anchor-link" href="#Mention-any-difficulties-you-faced-in-the-beginning-steps">&#182;</a></h3><ol>
+<li>I had initially missed to check the <code>robots.txt</code> file over RYM which resulted in my IP ban on that site. I used VPN to bypass this ban.</li>
+<li><code>beautifulsoup</code> also did not work over RYM due to the <code>robots.txt</code> configuration. We explored multiple projects over Github and finally found a <a href="https://github.com/dbeley/rymscraper">repository</a> that used <code>selenium</code> which emulates your browsing by actually maintaining session within your browser to the website</li>
+</ol>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14412,17 +14700,31 @@ Link to our <a href="https://github.com/stoic-devv/spotify-data-science/tree/mai
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Challenges">Challenges<a class="anchor-link" href="#Challenges">&#182;</a></h2>
+<h2 id="Challenges">Challenges<a class="anchor-link" href="#Challenges">&#182;</a></h2><ol>
+<li>Formulating the problem statement was challening. We saw many datasets and their EDA over Kaggle for Spotify. All of them were some sort of unsupervised modelling. We thought </li>
+<li>Scraping and cleaning: We ran into various problems of installation, IP banning, and combining &amp; cleaning data.</li>
+<li>We foresee a challenge to devise a metric that correlates the songs of different genres. User ratings for songs alone cannot serve as a metric for both recommending the best song and that too from a different genre</li>
+</ol>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Next-Steps">Next Steps<a class="anchor-link" href="#Next-Steps">&#182;</a></h2>
+<h2 id="Next-Steps">Next Steps<a class="anchor-link" href="#Next-Steps">&#182;</a></h2><ol>
+<li>We plan to do some more EDA along the lines for reducing dimensions/finding the most relevant features.</li>
+<li>We plan to build our song recommender using a combination of supervised learning - based on user ratings and unsupervised learning - based on audio features.</li>
+<li>In the end will compare our results with the plain unsupervised models (existing work on Spotify datasets).</li>
+</ol>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Duties">Duties<a class="anchor-link" href="#Duties">&#182;</a></h2>
+<h2 id="Duties">Duties<a class="anchor-link" href="#Duties">&#182;</a></h2><ol>
+<li>Data scraping and cleaning - Aditya Kanthale</li>
+<li>EDA - Amanuel Odicha, Vivek Patel</li>
+</ol>
+
 </div>
 </div>
 </body>
