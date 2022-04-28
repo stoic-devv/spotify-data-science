@@ -10,8 +10,14 @@
 ### Existing solutions
 1. [EveryNoise](https://everynoise.com) has collected and designed a web of genres
 2. They play the top songs for each genre based on Spotify's popularity metric
-
+### What different we are doing
+1. User/Spotify playlist data doesn't have varying the 
+1. RYM - forum for reviewing music
+2. Scraped the top 20 album from each year
+3. These give a varied distribution of genres
+4. 
 ## Data Collection & Attributes
+1. 
 
 ### RYM data
 1. wrote a scraper 
